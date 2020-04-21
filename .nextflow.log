@@ -1,0 +1,57 @@
+Apr-21 01:33:33.008 [main] DEBUG nextflow.cli.Launcher - $> nextflow run tutorial.nf --str 'Bonjour le monde' --with-report
+Apr-21 01:33:33.338 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.01.0
+Apr-21 01:33:33.370 [main] INFO  nextflow.cli.CmdRun - Launching `tutorial.nf` [cranky_swirles] - revision: a4e265bd66
+Apr-21 01:33:33.491 [main] DEBUG nextflow.Session - Session uuid: 4c70830e-ecf5-4ba1-9d94-24925a868591
+Apr-21 01:33:33.492 [main] DEBUG nextflow.Session - Run name: cranky_swirles
+Apr-21 01:33:33.494 [main] DEBUG nextflow.Session - Executor pool size: 24
+Apr-21 01:33:33.563 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.01.0 build 5050
+  Modified: 22-01-2019 11:19 UTC (03:19 PDT)
+  System: Linux 3.10.0-693.11.6.el7.x86_64
+  Runtime: Groovy 2.5.5 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_92-b14
+  Encoding: UTF-8 (UTF-8)
+  Process: 13400@login-p1n02.kamiak.wsu.edu [198.17.13.8]
+  CPUs: 24 - Mem: 125.7 GB (10.9 GB) - Swap: 16 GB (15.9 GB)
+Apr-21 01:33:33.791 [main] DEBUG nextflow.Session - Work-dir: /home/greysen.danae/a5/work [nfs]
+Apr-21 01:33:33.796 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/greysen.danae/a5/bin
+Apr-21 01:33:34.618 [main] DEBUG nextflow.Session - Session start invoked
+Apr-21 01:33:34.638 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+Apr-21 01:33:34.639 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+Apr-21 01:33:35.554 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Apr-21 01:33:35.983 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-21 01:33:35.984 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-21 01:33:36.010 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-21 01:33:36.017 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+Apr-21 01:33:36.027 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=24; memory=125.7 GB; capacity=24; pollInterval=100ms; dumpInterval=5m
+Apr-21 01:33:36.038 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+Apr-21 01:33:36.039 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Apr-21 01:33:36.044 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+Apr-21 01:33:36.203 [main] DEBUG nextflow.Session - >>> barrier register (process: splitletters)
+Apr-21 01:33:36.213 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > splitletters -- maxForks: 24
+Apr-21 01:33:36.358 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-21 01:33:36.359 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-21 01:33:36.359 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-21 01:33:36.362 [main] DEBUG nextflow.Session - >>> barrier register (process: convertToUpper)
+Apr-21 01:33:36.363 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > convertToUpper -- maxForks: 24
+Apr-21 01:33:36.405 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Apr-21 01:33:36.405 [main] DEBUG nextflow.Session - Session await
+Apr-21 01:33:36.892 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-21 01:33:36.902 [Task submitter] INFO  nextflow.Session - [f4/952fb2] Submitted process > splitletters
+Apr-21 01:33:37.161 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: splitletters; status: COMPLETED; exit: 0; error: -; workDir: /home/greysen.danae/a5/work/f4/952fb2f2290778061ea04724ace867]
+Apr-21 01:33:37.194 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: splitletters)
+Apr-21 01:33:37.385 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-21 01:33:37.386 [Task submitter] INFO  nextflow.Session - [d0/40801e] Submitted process > convertToUpper (2)
+Apr-21 01:33:37.522 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-21 01:33:37.522 [Task submitter] INFO  nextflow.Session - [20/9ed43a] Submitted process > convertToUpper (1)
+Apr-21 01:33:37.754 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-21 01:33:37.755 [Task submitter] INFO  nextflow.Session - [1b/c16f11] Submitted process > convertToUpper (3)
+Apr-21 01:33:37.927 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: convertToUpper (2); status: COMPLETED; exit: 0; error: -; workDir: /home/greysen.danae/a5/work/d0/40801e4012255379007ff0dbd8daa3]
+Apr-21 01:33:39.810 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: convertToUpper (1); status: COMPLETED; exit: 0; error: -; workDir: /home/greysen.danae/a5/work/20/9ed43a07a01d5ded1728f2fe0a69e9]
+Apr-21 01:33:41.574 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: convertToUpper (3); status: COMPLETED; exit: 0; error: -; workDir: /home/greysen.danae/a5/work/1b/c16f113c952135fe0d2111e283fc0d]
+Apr-21 01:33:42.128 [Actor Thread 5] DEBUG nextflow.Session - <<< barrier arrive (process: convertToUpper)
+Apr-21 01:33:42.129 [main] DEBUG nextflow.Session - Session await > all process finished
+Apr-21 01:33:42.198 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+Apr-21 01:33:42.198 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Apr-21 01:33:42.219 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=4; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=6.5s; failedDuration=0ms; cachedDuration=0ms]
+Apr-21 01:33:43.626 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Apr-21 01:33:43.823 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

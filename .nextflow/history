@@ -1,0 +1,5 @@
+2020-04-21 01:21:55	-	extravagant_lavoisier	-	94ac323654cb51f68545ec57860f1f50	e50a3523-2110-4620-afad-45b10279f2a9	nextflow run tutorial.nf
+2020-04-21 01:25:41	4.3s	stupefied_ramanujan	OK	6357781ae34dc8fa8c65f45e9a55a2df	b8c5865f-1337-40f2-a723-e6805ccfced9	nextflow run tutorial.nf
+2020-04-21 01:29:26	4.5s	chaotic_rubens	OK	a4e265bd66932e8aef971d0978b11543	b8c5865f-1337-40f2-a723-e6805ccfced9	nextflow run tutorial.nf -resume
+2020-04-21 01:30:52	4.8s	stupefied_torricelli	OK	a4e265bd66932e8aef971d0978b11543	c0dd953d-0bd1-4444-88aa-4c7778211c28	nextflow run tutorial.nf --str 'Bonjour le monde'
+2020-04-21 01:33:33	10.7s	cranky_swirles	OK	a4e265bd66932e8aef971d0978b11543	4c70830e-ecf5-4ba1-9d94-24925a868591	nextflow run tutorial.nf --str 'Bonjour le monde' --with-report
